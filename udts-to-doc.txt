@@ -1,0 +1,28 @@
+TOPICS TO COVER
+
+Basic flow (managing a match from start to finish)
+
+Teams (Tab)
+- General purpose
+- Adding a team
+- Editing a team
+- Deleting a team
+
+Matches (Tab)
+- General purpose
+- What are matches?
+- Adding a match
+- Deleting a match
+- Reorganizing matches
+
+Live (Tab)
+- General purpose
+- Starting a match
+- What buttons do
+
+Working with Challonge
+- ??
+
+Integrating with OBS
+- Components
+- Scene recipes
