@@ -1,4 +1,0 @@
-Quickstart Guide
-================
-
-A step-by-step guide to installing and using Update the Stream (UDTS).
