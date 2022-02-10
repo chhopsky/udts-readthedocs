@@ -37,7 +37,7 @@ jobs:
           pipenv install Sphinx
           pipenv lock
           pipenv sync
-          sphinx-build -b html docs/source docs/build/html
+          pipenv run sphinx-build -b html docs/source docs/build/html
           
       - uses: actions/checkout@v2
         with:
