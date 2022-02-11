@@ -2,7 +2,7 @@ from os import walk
 import os
 import requests
 
-token = os.environ.get('GH_PAT')
+token = os.environ.get('DEPLOYMENT')
 if token:
     foldername = "website/builds/development"
 else:
