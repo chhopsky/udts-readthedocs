@@ -4,7 +4,7 @@ import requests
 
 token = os.environ.get('GH_PAT')
 if token:
-    foldername = ".website/builds/development"
+    foldername = "website/builds/development"
 else:
     foldername = "../chhopsky.github.io/builds/development"
 
