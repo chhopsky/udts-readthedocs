@@ -37,7 +37,12 @@ jobs:
           pipenv install Sphinx
           pipenv lock
           pipenv sync
-
+    
+      - name: Build site
+        run: |
+          pipenv git clone https://github.com/chhopsky/chhopsky.github.io.git
+          pipenv run build-release-page.py
+          pipenv run sphinx-build -b html docs/source docs/build/html
           
       - uses: actions/checkout@v2
         with:
@@ -45,11 +50,6 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           path: 'website'
           fetch-depth: 2
-      
-      - name: Build site
-        run: |
-          pipenv run build-release-page.py
-          pipenv run sphinx-build -b html docs/source docs/build/html
           
       - name: Publish to github pages
         run: |
