@@ -29,3 +29,4 @@ How to contribute
    components
    integrations
    patchnotes
+   releases
