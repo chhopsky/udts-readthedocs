@@ -23,24 +23,35 @@ for release in data:
         for asset in assets:
             results[release["tag_name"]][asset["name"]] = asset["browser_download_url"]
 
+# Change release header here
 output = """
+
+#################
 Release Downloads
-=================
+#################
 
-Public releases have been tested and approved for release. Development builds are the latest check-ins from our development branch; use at your own risk.
+**Stable releases** have been tested and approved for public use. 
 
-Public Releases
------------------\n"""
+**Development builds** are the latest check-ins from our development branch; use at your own risk.
 
+***************
+Stable Releases
+***************\n"""
+
+# main releases generated here. results.items is a dict of release tags and the value is a dict of files
 for key, value in results.items():
-    output += f"**{key}**\n\n"
+    # release name is key, value is a dict of files
+    output += f"{key}\n"
+    output += "==========\n"
     for key2, value2 in value.items():
-        output += f"- `{key2} <{value2}>`_\n"
+        # key2 is the filename, value2 is the url
+        output += f"`{key2} <{value2}>`_\n"
     output += f"\n\n"
 
 output += """
+*************************************
 Development Builds (unstable/testing)
--------------------------------------
+*************************************
 """
 files = set()
 for (dirpath, dirnames, filenames) in walk(foldername):
@@ -54,12 +65,23 @@ last_file = "udts-0000000-ffffff-blah"
 for file in files:
     f_s = file.split("-")
     l_s = last_file.split("-")
+    
+    # compares the date portion of the file name.
+    # if the date has changed, show a new date header
     if f_s[1] != l_s[1]:
         output += "\n"
-        output += f"**{f_s[1][0:4]}-{f_s[1][4:6]}-{f_s[1][6:8]}**\n"
+        date_string = f"{f_s[1][0:4]}-{f_s[1][4:6]}-{f_s[1][6:8]}"
+        output += f"{date_string}\n"
+        output += "==========\n"
+
+    # if the build SHA code (e.g. e8eb1e3) is different
+    # make a block for a new build
     if f_s[2] != l_s[2]:
-        output += f"\n*{f_s[2]}*\n\n"
-    output += f"- {f_s[3].capitalize()}: `{file} <https://updatethestream.com/builds/development/{file}>`_ \n"
+        output += f"\n{f_s[2]}\n"
+        output += "-------\n"
+
+    # print the file link
+    output += f"* {f_s[3].capitalize()}: `{file} <https://updatethestream.com/builds/development/{file}>`_ \n"
     last_file = file
 
 
