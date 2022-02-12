@@ -59,7 +59,7 @@ for file in files:
         output += f"**{f_s[1][0:4]}-{f_s[1][4:6]}-{f_s[1][6:8]}**\n"
     if f_s[2] != l_s[2]:
         output += f"\n*{f_s[2]}*\n\n"
-    output += f"- {f_s[3].capitalize()}: `{file} <http://updatethestream.com/builds/development/{file}>`_\n"
+    output += f"- {f_s[3].capitalize()}: `{file} <https://updatethestream.com/builds/development/{file}>`_ \n"
     last_file = file
 
 
