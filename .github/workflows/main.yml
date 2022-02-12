@@ -44,7 +44,7 @@ jobs:
           repository: chhopsky/chhopsky.github.io
           token: ${{ secrets.GH_PAT }}
           path: 'website'
-          fetch-depth: 2
+          fetch-depth: 0
     
       - name: Build site
         run: |
