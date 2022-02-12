@@ -2,9 +2,9 @@
 Patch Notes
 ###########
 
-**********************
-v0.3-alpha: 27/01/2022
-**********************
+***********************
+v0.3-alpha | 2022-01-27
+***********************
 
 Features
 ========
@@ -30,9 +30,9 @@ Bug Fixes
 * Fixed a bug where attempting to load a draft tournament preview could cause a crash.
 * Fixed a bug where progressing a match added from the UI could cause a crash.
 
-************************
-v0.2.1-alpha: 08/01/2022
-************************
+*************************
+v0.2.1-alpha | 2022-01-08
+*************************
 
 Features
 ========
@@ -49,9 +49,9 @@ Bug Fixes
 * Fixed a bug where attempting to edit a match or team without selecting one would cause a crash.
 * Fixed a bug where adding a match would overwrite previous matches.
 
-************************
-v0.1.1-alpha: 29/12/2021
-************************
+*************************
+v0.1.1-alpha | 2021-12-29
+*************************
 
 Bug Fixes
 =========
@@ -59,7 +59,7 @@ Bug Fixes
 * Fixed a bug where editing a team would not update the schedule on the live window.
 * Fixed a bug that caused the chhopsky.tv logo to not appear.
 
-**********************
-v0.1-alpha: 29/12/2021
-**********************
+***********************
+v0.1-alpha | 2021-12-29
+***********************
 *Initial release*
