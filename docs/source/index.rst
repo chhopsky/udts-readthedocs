@@ -17,7 +17,7 @@ Downloads
 *****************
 How to contribute
 *****************
-`Read our contributing guidelines <https://github.com/chhopsky/updatethestream/blob/main/how-to-contribute.md>`_ and `join the UDTS development Discord <https://discord.gg/2Np3wTXQ>`_ to start collaborating. We're happy to help you figure out where your skills fit in the UDTS project!
+`Read our contributing instructions <https://github.com/chhopsky/updatethestream/blob/main/how-to-contribute.md>`_ and `join the UDTS development Discord <https://discord.gg/2Np3wTXQ>`_ to start collaborating. We're happy to help you figure out where your skills fit in the UDTS project!
 
 
 .. note::
