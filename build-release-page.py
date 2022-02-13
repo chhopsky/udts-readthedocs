@@ -40,9 +40,11 @@ Stable Releases
 
 # main releases generated here. results.items is a dict of release tags and the value is a dict of files
 for key, value in results.items():
-    # release name is key, value is a dict of files
+    # release name is key, value is a dict of files. underline amount calculated off key length
     output += f"{key}\n"
-    output += "==========\n"
+    for i in range(len(key)):
+        output += "="
+    output += "\n"
     for key2, value2 in value.items():
         # key2 is the filename, value2 is the url
         output += f"`{key2} <{value2}>`_\n"
@@ -62,39 +64,41 @@ for (dirpath, dirnames, filenames) in walk(foldername):
 files = sorted(files, reverse=True)
 
 last_file = "udts-0000000-ffffff-blah"
-for file in files:
-    # f_s is the current file name
-    # l_s is the last file name
-    # we will do different stuff based on what changes in these file names
-    # the file name is like "udts-0000000-ffffff-blah"
-    # so splitting on - makes a list ['udts','000000','ffffff','blah']
-    # f[0]: udts
-    # f[1]: the date
-    # f[2]: the build SHA code (uniqueish)
-    # f[3]: platform, either windows or macos
-    # there is a junk one so that it shows everything the first time
+if len(files):
+    for file in files:
+        # f_s is the current file name
+        # l_s is the last file name
+        # we will do different stuff based on what changes in these file names
+        # the file name is like "udts-0000000-ffffff-blah"
+        # so splitting on - makes a list ['udts','000000','ffffff','blah']
+        # f[0]: udts
+        # f[1]: the date
+        # f[2]: the build SHA code (uniqueish)
+        # f[3]: platform, either windows or macos
+        # there is a junk one so that it shows everything the first time
 
-    f_s = file.split("-")
-    l_s = last_file.split("-")
+        f_s = file.split("-")
+        l_s = last_file.split("-")
 
-    # compares the date portion of the file name.
-    # if the date has changed, show a new date header
-    if f_s[1] != l_s[1]:
-        output += "\n"
-        date_string = f"{f_s[1][0:4]}-{f_s[1][4:6]}-{f_s[1][6:8]}"
-        output += f"{date_string}\n"
-        output += "==========\n"
+        # compares the date portion of the file name.
+        # if the date has changed, show a new date header
+        if f_s[1] != l_s[1]:
+            output += "\n"
+            date_string = f"{f_s[1][0:4]}-{f_s[1][4:6]}-{f_s[1][6:8]}"
+            output += f"{date_string}\n"
+            output += "==========\n"
 
-    # if the build SHA code (e.g. e8eb1e3) is different
-    # make a block for a new build
-    if f_s[2] != l_s[2]:
-        output += f"\n{f_s[2]}\n"
-        output += "-------\n"
+        # if the build SHA code (e.g. e8eb1e3) is different
+        # make a block for a new build
+        if f_s[2] != l_s[2]:
+            output += f"\n{f_s[2]}\n"
+            output += "-------\n"
 
-    # print the file link
-    output += f"* {f_s[3].capitalize()}: `{file} <https://updatethestream.com/builds/development/{file}>`_ \n"
-    last_file = file
-
+        # print the file link
+        output += f"* {f_s[3].capitalize()}: `{file} <https://updatethestream.com/builds/development/{file}>`_ \n"
+        last_file = file
+else:
+    output += "\nThere are currently no available development builds."
 
 with open("docs/source/releases.rst","w") as f:
     f.write(output)
