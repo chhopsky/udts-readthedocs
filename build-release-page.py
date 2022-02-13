@@ -88,11 +88,11 @@ if len(files):
             output += f"{date_string}\n"
             output += "==========\n"
 
-        # if the build SHA code (e.g. e8eb1e3) is different
+        # if the build tinme is different
         # make a block for a new build
         if f_s[2] != l_s[2]:
-            output += f"\n{f_s[2]}\n"
-            output += "-------\n"
+            output += f"\n{f_s[2][0:2]}:{f_s[2][2:4]}\n"
+            output += "-----\n"
 
         # print the file link
         output += f"* {f_s[3].capitalize()}: `{file} <https://updatethestream.com/builds/development/{file}>`_ \n"
