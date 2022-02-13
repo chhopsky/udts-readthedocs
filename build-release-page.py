@@ -30,9 +30,9 @@ output = """
 Release Downloads
 #################
 
-**Stable releases** have been tested and approved for public use. 
+**Stable releases** are for public use, and though still in alpha, should be stable.
 
-**Development builds** are the latest check-ins from our development branch; use at your own risk.
+**Development builds** are the latest check-ins from our development branch and may have bugs; use at your own risk.
 
 ***************
 Stable Releases
