@@ -15,6 +15,7 @@ If you don't have UDTS installed, you can :doc:`download the latest release here
 Adding teams
 ************
 
+
 ****************
 Creating matches
 ****************
@@ -23,3 +24,4 @@ Creating matches
 Recording scores
 ****************
 
+*****

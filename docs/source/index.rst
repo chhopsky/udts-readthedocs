@@ -7,17 +7,26 @@
 Welcome to Update the Stream's documentation
 ############################################
 
-**Update the Stream** (UDTS) is an app that lets you easily manage esports scores, matches, and tournaments on your livestream. It can also pull information from external sources like Challonge to automatically update your in-stream UI.
+**Update the Stream** (UDTS) lets you automate esports score, match, and tournament updates on your livestream.
 
 *********
 Downloads
 *********
-:doc:`Get the latest releases here </releases>`
+:doc:`See available releases </releases>`
+
+*********
+Features
+*********
+* Simple, intuitive user interface
+* Quick and easy mid-stream updates; no manual source editing 
+* Compatible with OBS, XSplit, vMix, and any other broadcast software that accepts text and image files
+* Built-in web server; write your own HTML, JavaScript, or CSS overlays
+* (Coming soon) Customizable, professional-looking templates
 
 *****************
 How to contribute
 *****************
-`Read our contributing instructions <https://github.com/chhopsky/updatethestream/blob/main/how-to-contribute.md>`_ and `join the UDTS development Discord <https://discord.gg/2Np3wTXQ>`_ to start collaborating. We're happy to help you figure out where your skills fit in the UDTS project!
+`Read our contribution instructions <https://github.com/chhopsky/updatethestream/blob/main/how-to-contribute.md>`_ and `join the UDTS development Discord <https://discord.gg/2Np3wTXQ>`_ to start collaborating. We're happy to help you figure out where your skills fit in the UDTS project!
 
 
 .. note::
