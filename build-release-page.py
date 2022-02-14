@@ -54,6 +54,7 @@ output += """
 *************************************
 Development Builds (unstable/testing)
 *************************************
+*All times are in UTC.*
 """
 files = set()
 for (dirpath, dirnames, filenames) in walk(foldername):
@@ -91,8 +92,17 @@ if len(files):
         # if the build tinme is different
         # make a block for a new build
         if f_s[2] != l_s[2]:
-            output += f"\n{f_s[2][0:2]}:{f_s[2][2:4]}\n"
-            output += "-----\n"
+            hours = int(f_s[2][0:2])
+            minutes = f_s[2][2:4]
+            suffix = "AM"
+            if hours > 12:
+                hours = hours - 12
+                suffix = "PM"
+            timestring = f"{hours}:{minutes} {suffix}"
+            output += f"\n{timestring}\n"
+            for i in range(len(timestring)):
+                output += "-"
+            output += "\n"
 
         # print the file link
         output += f"* {f_s[3].capitalize()}: `{file} <https://updatethestream.com/builds/development/{file}>`_ \n"
