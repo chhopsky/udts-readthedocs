@@ -4,6 +4,7 @@ name: CI
 
 env:
   DEPLOYMENT: true
+  GCS_SERVICE_ACCT: ${{ secrets.GCS_SERVICE_ACCT }}
 
 # Controls when the workflow will run
 on:
@@ -35,12 +36,9 @@ jobs:
           cache: 'pipenv'
           cache-dependency-path: '**/Pipfile'
           
-      - name: Setup Pipenv
+      - name: Install packages
         run: |
-          python -m pip install -U pip pipenv
-          pipenv install Sphinx
-          pipenv lock
-          pipenv sync
+          python -m pip install Sphinx requests google-cloud-storage sphinx-rtd-theme
     
       - uses: actions/checkout@v2
         with:
@@ -51,10 +49,8 @@ jobs:
     
       - name: Build site
         run: |
-          pipenv run mkdir creds
-          pipenv echo '${{ secrets.GCS_SERVICE_ACCT }}' >> creds/gcloud-service-account.json
-          pipenv run python build-release-page.py
-          pipenv run sphinx-build -b html docs/source docs/build/html
+          python build-release-page.py
+          sphinx-build -b html docs/source docs/build/html
           
       - name: Publish to github pages
         run: |
