@@ -1,13 +1,9 @@
 from os import walk
 import os
 import requests
+from google.cloud import storage
 
-token = os.environ.get('DEPLOYMENT')
-if token:
-    foldername = "website/builds/development"
-else:
-    foldername = "../chhopsky.github.io/builds/development"
-
+## get github releases
 try:
     response = requests.get("https://api.github.com/repos/chhopsky/updatethestream/releases")
     data = response.json()
@@ -56,13 +52,35 @@ Development Builds (unstable/testing)
 *************************************
 *All times are in UTC.*
 """
-files = set()
-for (dirpath, dirnames, filenames) in walk(foldername):
-    for filename in filenames:
-        if filename.endswith(".zip"):
-            files.add(filename)
 
-files = sorted(files, reverse=True)
+"""Lists all the blobs in the bucket."""
+
+credentials = os.environ.get("GCS_SERVICE_ACCT")
+if not credentials:
+    try:
+        with open("creds/gcloud-service-account.json","r") as f:
+            credentials = f.read(output)
+    except:
+        credentials = None
+
+storage_client = storage.Client(project="provinggrounds", credentials=credentials)
+
+bucket_name = "downloads.chhopsky.tv"
+
+# Note: Client.list_blobs requires at least package version 1.17.0.
+path = "updatethestream/"
+blobs = storage_client.list_blobs(bucket_name, prefix=path, delimiter=path)
+
+builds = {"release": [], "development": []}
+
+for blob in blobs:
+    if blob.name.endswith(".zip"):
+        filename = blob.name.split("/")
+        builds[filename[1]].append(filename[2])
+    
+print(builds)
+
+files = sorted(builds["development"], reverse=True)
 
 last_file = "udts-0000000-ffffff-blah"
 if len(files):
@@ -105,7 +123,7 @@ if len(files):
             output += "\n"
 
         # print the file link
-        output += f"* {f_s[3].capitalize()}: `{file} <https://updatethestream.com/builds/development/{file}>`_ \n"
+        output += f"* {f_s[3].capitalize()}: `{file} <https://storage.googleapis.com/downloads.chhopsky.tv/updatethestream/development/{file}>`_ \n"
         last_file = file
 else:
     output += "\nThere are currently no available development builds."
