@@ -56,7 +56,6 @@ jobs:
           export GOOGLE_APPLICATION_CREDENTIALS='${{ secrets.GCS_SERVICE_ACCT }}'
           python build-release-page.py
           sphinx-build -b html docs/source docs/build/html
-          exit
           
       - name: Publish to github pages
         run: |
