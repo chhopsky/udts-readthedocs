@@ -55,15 +55,8 @@ Development Builds (unstable/testing)
 
 """Lists all the blobs in the bucket."""
 
-credentials = os.environ.get("GCS_SERVICE_ACCT")
-if not credentials:
-    try:
-        with open("creds/gcloud-service-account.json","r") as f:
-            credentials = f.read(output)
-    except:
-        credentials = None
-
-storage_client = storage.Client(project="provinggrounds", credentials=credentials)
+storage_client = storage.Client.from_service_account_json(
+        'creds/gcloud-service-account.json')
 
 bucket_name = "downloads.chhopsky.tv"
 
