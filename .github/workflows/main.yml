@@ -51,8 +51,11 @@ jobs:
     
       - name: Build site
         run: |
+          mkdir creds
+          echo '${{ secrets.GCS_SERVICE_ACCT }}' > creds/gcloud-service-account.json
           pipenv run python build-release-page.py
           pipenv run sphinx-build -b html docs/source docs/build/html
+          rm creds/gcloud-service-account.json
           
       - name: Publish to github pages
         run: |
