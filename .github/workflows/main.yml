@@ -4,6 +4,7 @@ name: CI
 
 env:
   DEPLOYMENT: true
+  GCS_SERVICE_ACCT: ${{ secrets.GCS_SERVICE_ACCT }}
 
 # Controls when the workflow will run
 on:
@@ -47,10 +48,12 @@ jobs:
           repository: chhopsky/chhopsky.github.io
           token: ${{ secrets.GH_PAT }}
           path: 'website'
-          fetch-depth: 0
+          fetch-depth: 1
     
       - name: Build site
         run: |
+          pipenv run mkdir creds
+          pipenv echo '${{ secrets.GCS_SERVICE_ACCT }}' >> creds/gcloud-service-account.json
           pipenv run python build-release-page.py
           pipenv run sphinx-build -b html docs/source docs/build/html
           
