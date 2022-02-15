@@ -67,7 +67,7 @@ blobs = storage_client.list_blobs(bucket_name, prefix=path, delimiter=path)
 builds = {"release": [], "development": []}
 
 for blob in blobs:
-    if blob.name.endswith(".zip"):
+    if blob.name.endswith(".zip") or blob.name.endswith(".tgz"):
         filename = blob.name.split("/")
         builds[filename[1]].append(filename[2])
     
