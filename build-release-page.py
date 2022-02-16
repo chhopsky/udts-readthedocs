@@ -116,7 +116,7 @@ if len(files):
             output += "\n"
 
         # print the file link
-        output += f"* {f_s[3].capitalize()}: `{file} <https://storage.googleapis.com/downloads.chhopsky.tv/updatethestream/development/{file}>`_ \n"
+        output += f"* {f_s[3].capitalize()}: `{file} <https://downloads.chhopsky.tv/updatethestream/development/{file}>`_ \n"
         last_file = file
 else:
     output += "\nThere are currently no available development builds."
