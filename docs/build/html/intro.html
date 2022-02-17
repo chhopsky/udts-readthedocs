@@ -40,10 +40,21 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#launching-the-app">Launching the app</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#adding-teams">Adding teams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#creating-matches">Creating matches</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#recording-scores">Recording scores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-a-scene">Setting up a scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#populating-a-match">Populating a match</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manual-method">Manual method</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-teams">Add teams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-matches">Add matches</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#import-method">Import method</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#from-challonge">From Challonge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#from-faceit">From FACEIT</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#running-a-match">Running a match</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="components.html">App Components</a></li>
@@ -79,20 +90,69 @@
   <section id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
 <p>A step-by-step guide to setting up your first match in Update the Stream (UDTS).</p>
-<section id="launching-the-app">
-<h2>Launching the app<a class="headerlink" href="#launching-the-app" title="Permalink to this headline"></a></h2>
-<p>Find the folder where you put UDTS and launch <cite>udts.exe</cite>.</p>
-<p>If you don’t have UDTS installed, you can <a class="reference internal" href="releases.html"><span class="doc">download the latest release here</span></a>, then unzip it.</p>
+<section id="setting-up-a-scene">
+<h2>Setting up a scene<a class="headerlink" href="#setting-up-a-scene" title="Permalink to this headline"></a></h2>
+<p>(In Progress)</p>
 </section>
-<section id="adding-teams">
-<h2>Adding teams<a class="headerlink" href="#adding-teams" title="Permalink to this headline"></a></h2>
+<section id="populating-a-match">
+<h2>Populating a match<a class="headerlink" href="#populating-a-match" title="Permalink to this headline"></a></h2>
+<p>There are two ways to populate team and match data in UDTS: manually and via import.</p>
+<section id="manual-method">
+<h3>Manual method<a class="headerlink" href="#manual-method" title="Permalink to this headline"></a></h3>
+<section id="add-teams">
+<h4>Add teams<a class="headerlink" href="#add-teams" title="Permalink to this headline"></a></h4>
+<ol class="arabic simple">
+<li><p>Navigate to the <strong>Teams</strong> tab.</p></li>
+<li><p>Enter a team name and tricode.</p></li>
+<li><p>(Optional) Add team logo and hero images.</p></li>
+<li><p>Click the <strong>Add Team</strong> button.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/addteam.gif"><img alt="GIF of team being added to the app." src="_images/addteam.gif" style="width: 600px;" /></a>
+<p>Repeat to add a second team.</p>
 </section>
-<section id="creating-matches">
-<h2>Creating matches<a class="headerlink" href="#creating-matches" title="Permalink to this headline"></a></h2>
+<section id="add-matches">
+<h4>Add matches<a class="headerlink" href="#add-matches" title="Permalink to this headline"></a></h4>
+<p>Once you have at least two teams in your roster, you can create a match.</p>
+<ol class="arabic simple">
+<li><p>Navigate to the <strong>Matches</strong> tab.</p></li>
+<li><p>Use the <strong>Team 1</strong> dropdown to add your first team.</p></li>
+<li><p>Use the <strong>Team 2</strong> dropdown to add a second team.</p></li>
+<li><p>Use the <strong>Best Of</strong> dropdown to choose the number of matches you’d like those teams to play.</p></li>
+<li><p>Click the <strong>Add Match</strong> button to save your match</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/addmatch.gif"><img alt="GIF of a match being added to the app." src="_images/addmatch.gif" style="width: 600px;" /></a>
 </section>
-<section id="recording-scores">
-<h2>Recording scores<a class="headerlink" href="#recording-scores" title="Permalink to this headline"></a></h2>
-<hr class="docutils" />
+</section>
+<section id="import-method">
+<h3>Import method<a class="headerlink" href="#import-method" title="Permalink to this headline"></a></h3>
+<p>UDTS lets you import tournament information from both Challonge and FACEIT.</p>
+<section id="from-challonge">
+<h4>From Challonge<a class="headerlink" href="#from-challonge" title="Permalink to this headline"></a></h4>
+<ol class="arabic simple">
+<li><p>Open the <strong>File</strong> menu and select <strong>Open from Challonge.com</strong>.</p></li>
+<li><p>Enter your Challonge tournament code.</p></li>
+<li><p>Check the <strong>Teams</strong> and <strong>Matches</strong> tabs to view your imported tournament info.</p></li>
+</ol>
+</section>
+<section id="from-faceit">
+<h4>From FACEIT<a class="headerlink" href="#from-faceit" title="Permalink to this headline"></a></h4>
+<ol class="arabic simple">
+<li><p>Open the <strong>File</strong> menu and select <strong>Open from FACEIT</strong>.</p></li>
+<li><p>Enter your FACEIT.com tournament code.</p></li>
+<li><p>Check the <strong>Teams</strong> and <strong>Matches</strong> tabs to view your imported tournament info.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="running-a-match">
+<h2>Running a match<a class="headerlink" href="#running-a-match" title="Permalink to this headline"></a></h2>
+<p>Now that you’ve populated your teams and matches, you’re ready to record some scores!</p>
+<ol class="arabic simple">
+<li><p>Navigate to the <strong>Live</strong> tab. The match(es) you created should already be in the Schedule.</p></li>
+<li><p>When a team wins, click the <strong>[Team Name] Won!</strong> button to record their score.</p></li>
+<li><p>Continue to record scores until you’ve played through all of the games in your Best Of.</p></li>
+</ol>
+<p>That’s it! You’ve successfully run a match through UDTS.</p>
 </section>
 </section>
 
