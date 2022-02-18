@@ -27,9 +27,9 @@ File name components (keywords) indicate the type of information that a file con
 +------------+-------------------------------------------------+----------------------------------+
 | team(s)    | Team information                                | schedule-**teams**.txt           |
 +------------+-------------------------------------------------+----------------------------------+
-| team1      | Team currently in the Team 1 (red) position     | match-1-**team1**-icon.png       |
+| team1      | First team listed in match                      | match-1-**team1**-icon.png       |
 +------------+-------------------------------------------------+----------------------------------+
-| team2      | Team currently in the Team 2 (blue) position    | current-match-**team2**-hero.png |
+| team2      | Second team listed in match                     | current-match-**team2**-hero.png |
 +------------+-------------------------------------------------+----------------------------------+
 | score(s)   | Score (match)                                   | match-2-**scores**.txt           |
 +------------+-------------------------------------------------+----------------------------------+
