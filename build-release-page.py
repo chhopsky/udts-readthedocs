@@ -70,8 +70,6 @@ for blob in blobs:
     if blob.name.endswith(".zip") or blob.name.endswith(".tgz"):
         filename = blob.name.split("/")
         builds[filename[1]].append(filename[2])
-    
-print(builds)
 
 files = sorted(builds["development"], reverse=True)
 
