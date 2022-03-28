@@ -43,7 +43,11 @@ for key, value in results.items():
     output += "\n"
     for key2, value2 in value.items():
         # key2 is the filename, value2 is the url
-        output += f"`{key2} <{value2}>`_\n"
+        if "macos" in key2:
+            osstring = "Macos"
+        else:
+            osstring = "Windows"
+        output += f"* {osstring}: `{key2} <{value2}>`_\n"
     output += f"\n\n"
 
 output += """
