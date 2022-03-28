@@ -37,8 +37,11 @@ How to contribute
 .. toctree::
    :maxdepth: 2
 
-   intro
-   components
-   integrations
-   patchnotes
    releases
+   install
+   howitworks
+   teams
+   matches
+   live
+   importing
+   patchnotes

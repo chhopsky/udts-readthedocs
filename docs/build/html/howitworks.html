@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How it works &mdash; Update the Stream 0.3-alpha documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/chhtv.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Teams" href="teams.html" />
+    <link rel="prev" title="Install and launch" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Update the Stream
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="releases.html">Release Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install and launch</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How it works</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-streamlabels-folder">The /streamlabels folder</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="teams.html">Teams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matches.html">Matches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live.html">Live</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importing.html">Importing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patchnotes.html">Patch Notes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Update the Stream</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>How it works</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/howitworks.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="how-it-works">
+<h1>How it works<a class="headerlink" href="#how-it-works" title="Permalink to this headline"></a></h1>
+<p>Update the Stream (UDTS) uses your input about teams, matches, and scores to build .txt and .png files you can use with your stream. This lets you build scenes with elements that automatically update as you register scores and progress through a tournament — eliminating the need to manually edit overlays while streaming.</p>
+<p>UDTS also lets you import tournament information directly from Challonge and FACEIT.</p>
+<section id="the-streamlabels-folder">
+<h2>The /streamlabels folder<a class="headerlink" href="#the-streamlabels-folder" title="Permalink to this headline"></a></h2>
+<p>When UDTS creates or updates .txt and .png files, it puts them in the <strong>/streamlabels</strong> folder.</p>
+<p>These files automatically update when you record a win in UDTS.</p>
+<p>File name components (keywords) indicate the type of information that a file contains.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 52%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Keyword</p></th>
+<th class="head"><p>Significance</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>current</p></td>
+<td><p>Related to current match</p></td>
+<td><p><strong>current</strong>-match-team2-name.txt</p></td>
+</tr>
+<tr class="row-odd"><td><p>last</p></td>
+<td><p>Related to previous match</p></td>
+<td><p><strong>last</strong>-match.txt</p></td>
+</tr>
+<tr class="row-even"><td><p>match</p></td>
+<td><p>Match information</p></td>
+<td><p><strong>match</strong>-1-scores.txt</p></td>
+</tr>
+<tr class="row-odd"><td><p>team(s)</p></td>
+<td><p>Team information</p></td>
+<td><p>schedule-<strong>teams</strong>.txt</p></td>
+</tr>
+<tr class="row-even"><td><p>team1</p></td>
+<td><p>Team currently in the Team 1 (red) position</p></td>
+<td><p>match-1-<strong>team1</strong>-icon.png</p></td>
+</tr>
+<tr class="row-odd"><td><p>team2</p></td>
+<td><p>Team currently in the Team 2 (blue) position</p></td>
+<td><p>current-match-<strong>team2</strong>-hero.png</p></td>
+</tr>
+<tr class="row-even"><td><p>score(s)</p></td>
+<td><p>Score (match)</p></td>
+<td><p>match-2-<strong>scores</strong>.txt</p></td>
+</tr>
+<tr class="row-odd"><td><p>point(s)</p></td>
+<td><p>Score (tournament)</p></td>
+<td><p>standings-teams-<strong>points</strong>.txt</p></td>
+</tr>
+<tr class="row-even"><td><p>name(s)</p></td>
+<td><p>Team full name</p></td>
+<td><p>standing-teams-<strong>names</strong>.txt</p></td>
+</tr>
+<tr class="row-odd"><td><p>tricode(s)</p></td>
+<td><p>Team three-letter tricode</p></td>
+<td><p>current-match-<strong>tricodes</strong>.txt</p></td>
+</tr>
+<tr class="row-even"><td><p>icon</p></td>
+<td><p>Icon image</p></td>
+<td><p>match-4-team2-<strong>icon</strong>.png</p></td>
+</tr>
+<tr class="row-odd"><td><p>hero</p></td>
+<td><p>Hero image</p></td>
+<td><p>match-3-team1-<strong>hero</strong>.png</p></td>
+</tr>
+<tr class="row-even"><td><p>horizontal</p></td>
+<td><p>Horizontal text placement (default is vertical)</p></td>
+<td><p>match-3-teams-<strong>horizontal</strong>.txt</p></td>
+</tr>
+<tr class="row-odd"><td><p>schedule</p></td>
+<td><p>Schedule information</p></td>
+<td><p><strong>schedule</strong>-scores.txt</p></td>
+</tr>
+<tr class="row-even"><td><p>standings</p></td>
+<td><p>Standings information</p></td>
+<td><p><strong>standings</strong>-teams-leader.txt</p></td>
+</tr>
+<tr class="row-odd"><td><p>complete</p></td>
+<td><p>Tournament overview (names, scores)</p></td>
+<td><p>standings-<strong>complete</strong>.txt</p></td>
+</tr>
+<tr class="row-even"><td><p>combined</p></td>
+<td><p>All information of a particular type</p></td>
+<td><p>schedule-teams-<strong>combined</strong>.txt</p></td>
+</tr>
+<tr class="row-odd"><td><p>leader</p></td>
+<td><p>Team currently in the lead</p></td>
+<td><p>standings-teams-<strong>leader</strong>.txt</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install.html" class="btn btn-neutral float-left" title="Install and launch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="teams.html" class="btn btn-neutral float-right" title="Teams" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Christopher Pollock.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

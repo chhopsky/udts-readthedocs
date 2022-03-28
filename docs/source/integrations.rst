@@ -1,8 +1,0 @@
-Integrations
-============
-
-Challonge
----------
-
-OBS
----
