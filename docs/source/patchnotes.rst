@@ -15,7 +15,7 @@ Added:
 * Web-based remote controller  
 * Elgato Stream Deck plugin  
 * Built-in web server for self-hosting HTML, Javascript and CSS overlays  
-* Documentation and dev builds available from `updatethestream.com <https://updatethestream.com>_`
+* Documentation and dev builds available from `updatethestream.com <https://updatethestream.com>`_
 * Resizeable window layouts
 * New error protection handling
 * Logging, for when you need to contact support (files in /logs)
