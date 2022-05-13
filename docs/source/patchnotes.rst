@@ -3,6 +3,37 @@ Patch Notes
 ###########
 
 ***********************
+v0.4-alpha | 2022-03-26
+***********************
+
+Features
+========
+Added: 
+
+* Mac version now available
+* Support for loading tournaments from FACEIT  
+* Web-based remote controller  
+* Elgato Stream Deck plugin  
+* Built-in web server for self-hosting HTML, Javascript and CSS overlays  
+* Documentation and dev builds available from [updatethestream.com](https://updatethestream.com)
+* Resizeable window layouts
+* New error protection handling
+* Logging, for when you need to contact support (files in /logs)
+* Package is now signed on Windows (less panicking about untrusted code!)
+* Option to clear all matches
+* Best-of defaults
+* Many new outputs
+
+Removed:
+* "Refresh from Challonge" removed until it can be done safely
+
+Bug Fixes
+=========
+* Tonnes of bug fixes around edge cases
+* The program now appears normally on high-dpi screens
+
+
+***********************
 v0.3-alpha | 2022-01-27
 ***********************
 
