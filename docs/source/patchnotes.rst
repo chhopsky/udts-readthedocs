@@ -15,7 +15,7 @@ Added:
 * Web-based remote controller  
 * Elgato Stream Deck plugin  
 * Built-in web server for self-hosting HTML, Javascript and CSS overlays  
-* Documentation and dev builds available from [updatethestream.com](https://updatethestream.com)
+* Documentation and dev builds available from `updatethestream.com <https://updatethestream.com>_`
 * Resizeable window layouts
 * New error protection handling
 * Logging, for when you need to contact support (files in /logs)
@@ -25,6 +25,7 @@ Added:
 * Many new outputs
 
 Removed:
+
 * "Refresh from Challonge" removed until it can be done safely
 
 Bug Fixes
