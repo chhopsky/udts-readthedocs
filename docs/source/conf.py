@@ -19,11 +19,11 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'Update the Stream'
-copyright = '2022, Christopher Pollock'
-author = 'Christopher Pollock'
+copyright = '2022, Christina Pollock'
+author = 'Christina Pollock'
 
 # The full version, including alpha/beta/rc tags
-release = '0.3-alpha'
+release = '0.4-alpha'
 
 
 # -- General configuration ---------------------------------------------------
